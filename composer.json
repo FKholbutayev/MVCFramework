@@ -1,0 +1,16 @@
+{
+    "name": "memlin/mvc-framework",
+    "description": "MVCFramework from scratch",
+    "autoload": {
+        "psr-4": {
+            "Memlin\\MvcFramework\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "FKholbutayev",
+            "email": "ht.uzpharma@gmail.com"
+        }
+    ],
+    "require": {}
+}
