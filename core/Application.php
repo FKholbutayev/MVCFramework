@@ -1,8 +1,6 @@
 <?php
 namespace Memlin\MvcFramework\core;
 
-use Router;
-
 class Application {
 
     public Router $router;
@@ -10,5 +8,10 @@ class Application {
     public function __construct()
     {
         $this->router = new Router();
+    }
+
+    public function run()
+    {
+        $this->router->resolve();
     }
 }
