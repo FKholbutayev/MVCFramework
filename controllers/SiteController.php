@@ -3,12 +3,15 @@
 namespace app\controllers;
 
 use app\core\Application;
+use app\core\Request;
 
-class SiteController
+class SiteController extends Controller
 {
-    public function handleContact(): string
+    public function handleContact(Request $request)
     {
-        return "Handling contact in controller";
+        $body = $request->getBody();
+
+        var_dump($body);
     }
 
     public function home()
@@ -17,11 +20,11 @@ class SiteController
             "name" => "Fabrikod"
         ];
 
-        return Application::$app->router->renderView('home', $params);
+        return $this->render('home', $params);
     }
 
     public function contact(): string
     {
-        return Application::$app->router->renderView('contact');
+        return $this->render('contact');
     }
 }
