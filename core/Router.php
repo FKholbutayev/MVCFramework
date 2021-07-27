@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use JetBrains\PhpStorm\Pure;
+
 class Router {
 
     protected array $routes = [];
@@ -20,7 +22,17 @@ class Router {
 
     public function resolve()
     {
-        $this->request->getPath();
+        $path =  $this->request->getPath();
+        $method = $this->request->getMethod();
+
+        $callback = $this->routes[$method][$path] ?? false;
+
+        if ($callback === false) {
+            echo "NOt FOUND";
+            exit;
+        }
+
+        echo call_user_func($callback);
     }
 
 }
