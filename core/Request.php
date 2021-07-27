@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Memlin\MvcFramework\core;
+namespace app\core;
 
 
 class Request
@@ -11,7 +10,10 @@ class Request
         $path = $_SERVER['REQUEST_URI'] ?? '/';
         $position = strpos($path, '?');
 
-        var_dump($position);
+        if($position === false) {
+            return $path;
+        }
+        $path = substr($path, 0, $position);
     }
 
     public function getMethod()

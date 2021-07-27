@@ -1,6 +1,6 @@
 <?php
 
-namespace Memlin\MvcFramework\core;
+namespace app\core;
 
 class Router {
 
@@ -8,7 +8,7 @@ class Router {
 
     public Request $request;
 
-    public function __construct(\Memlin\MvcFramework\core\Request $request)
+    public function __construct(Request $request)
     {
         $this->request = $request;
     }

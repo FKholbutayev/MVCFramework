@@ -1,5 +1,5 @@
 <?php
-namespace Memlin\MvcFramework\core;
+namespace app\core;
 
 class Application {
 

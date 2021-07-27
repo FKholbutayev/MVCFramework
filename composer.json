@@ -1,9 +1,9 @@
 {
     "name": "memlin/mvc-framework",
-    "description": "MVCFramework from scratch",
+    "description": "MVCFramework from scratch Istanbul",
     "autoload": {
         "psr-4": {
-            "Memlin\\MvcFramework\\": "./"
+            "app\\": "./"
         }
     },
     "authors": [
