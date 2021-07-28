@@ -51,7 +51,7 @@ class Router {
         return call_user_func($callback, $this->request);
     }
 
-    public function renderView($view, $params)
+    public function renderView($view, $params = [])
     {
         $layoutContent = $this->layoutContent();
         $viewContent = $this->renderOnlyView($view, $params);
