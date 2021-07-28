@@ -10,15 +10,20 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        if ($request->isGet()) {
-            return $this->render('login');
+        if ($request->isPost()) {
+            return "handle login data";
         }
+
+        return $this->render('login');
     }
 
     public function register(Request $request)
     {
-        if ($request->isGet()) {
-            return $this->render('register');
+        if ($request->isPost()) {
+            return "handle register data";
         }
+
+        return $this->render('register');
+
     }
 }
